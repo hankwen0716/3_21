@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -7,48 +9,20 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Vehicle Myveh = new Vehicle();
 
-            Myveh.lunch();
-            Myveh.info();
-
-            Veh_b Myveh_b = new Veh_b();
-            Myveh_b.info();
-            //Console.WriteLine("Hello World!");
-
-            /* static void add_function(int a,int b)
-            {
-
-
-
-
-                return ;
-            } */
-        }
-
-    }
-    class Vehicle
-    {
-        int cc = 150;
-        string name = "no name";
-        public void lunch()
-        {
-            Console.WriteLine("Lunching....");
-        }
-        public virtual void info()
-        {
-            Console.WriteLine("name:"+name);
-            Console.WriteLine("CC:"+cc);
-            Console.WriteLine(".........");
         }
 
 
     }
-    class Veh_b : Vehicle
-    {
-        public override void info()
+    public class test:Interface_2
         {
-            Console.WriteLine("veh_b.info");
+        public string Name{get;set; }
+        public int Num();
+        public string item_name { get; set; }
+        public string price;
+
         }
-    }
+
+      
+
 }
